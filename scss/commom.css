@@ -191,7 +191,6 @@ header #Hamburger:hover > div {
         -ms-flex-direction: column;
             flex-direction: column;
     padding-bottom: 300px;
-    min-height: 700px;
     padding-right: 42vw;
     font-size: 1.2em;
   }
