@@ -268,6 +268,8 @@ header #Hamburger:hover > div {
 #home #home-text p {
   font-family: 'Gaegu', cursive;
   white-space: nowrap;
+  position: relative;
+  z-index: 10;
 }
 
 #home > span {
