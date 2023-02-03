@@ -952,6 +952,9 @@ header #Hamburger:hover > div {
   #Portfolio #contents ul li a .contents-text {
     width: 80%;
   }
+  #Design {
+    padding: 10vh 0;
+  }
   #Design .click_img img {
     width: 55%;
   }
