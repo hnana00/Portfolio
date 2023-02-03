@@ -1,0 +1,378 @@
+@import "commom.scss";
+
+@keyframes logo {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -10px;
+  }
+}
+
+// home style set **********************
+#container {
+  overflow: hidden;
+}
+#home {
+  @include size-set-color(100vw, 100vh, $color2);
+
+  #home-text {
+    @include size-set(100vw, 90vh);
+    @include flex-set(center, center, column);
+    @include font-set(1.5em, normal, center, #5F6476);
+    padding-left: 1vw;
+    
+    h2 {
+      font-family: 'Pangolin', cursive;
+      font-size: 4em;
+      letter-spacing: 0.24em;
+    }
+
+    p {
+      font-family: 'Gaegu', cursive;
+      white-space: nowrap;
+    }
+  }
+
+  & > span {
+    display: block;
+    opacity: 0;
+  }
+  
+  & > span:nth-of-type(1) {
+    @include size-set(567px, 540px);
+    background: url(../images/icon1.png) no-repeat;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  & > span:nth-of-type(2) {
+    @include size-set(148px, 136px);
+    background: url(../images/icon2.png) no-repeat;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+  }
+}
+
+
+// About-me style set **********************
+#About-me {
+  @include size-set-color(100vw, 100%, $color1);
+  @include flex-set(center, center, row);
+  @include font-set(1em, 300, left, $color2);
+  white-space:nowrap;
+  padding: 16vh 0;
+
+  & > div {
+    @include flex-set(space-between, left, column);
+    @include size-set(20vw, 67vh);
+    min-height: 650px;
+
+    strong {
+      @include font-set(1.9em, 500, left, $color3);
+      position: relative;
+      display: block;
+      margin-bottom: 3.5vh;
+    }
+    strong::before {
+      content: '';
+      @include size-set-color(20vw, 1px, $color2);
+      @include absolute-top-left(120%, 0, translateY(0));
+    }
+
+    p, img {
+      margin-top: 1vh;
+    }
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  hr {
+    @include size-set(1px, 160px);
+    margin: 0 6vw;
+  }
+
+  #box1 {
+    text-align: center;
+    height: 67vh;
+    min-height: 650px;
+    
+    #img {
+      @include size-set(289px, 364px);
+      background: url(../images/img.png) no-repeat;
+      align-self: center;
+      position: relative;
+    }
+    #img::before,
+    #img::after {
+      content: '';
+      @include absolute-top-left(-10px, -10px, translate(0, 0));
+      @include size-set(306px, 385px);
+      border: 1px solid rgba(245, 240, 237, 0.6);
+      box-sizing: border-box;
+      border-radius: 144px;
+    }
+    #img::before {
+      transform: rotate(30deg);
+    }
+    #img::after {
+      transform: rotate(-30deg);
+    }
+
+    #aboutme {
+      & > h2 {
+        font-size: 1.7em;
+        font-weight: 400;
+      }
+      & > p {
+        margin-top: 2vh;
+      }
+    }
+  }
+
+  #box2 {
+    margin-right: 8vw;
+  }
+
+  #box3 {
+    #skill,#hobby  {
+      text-align: center;
+  
+      img {
+        margin-right: 2vw;
+      }
+  
+      img:nth-of-type(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+// Portfolio style set **********************
+#Portfolio {
+  @include size-set-color(100vw, 100%, $color2);
+  @include flex-set(center, center, row);
+  border-bottom: 1px solid #2F48584D;
+  position: relative;
+  padding: 21vh 0;
+
+  #btn {
+    & > div {
+      @include size-set(80px, 80px);
+      border: 1px solid #2F485880;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      text-indent: -9999em;
+      cursor: pointer;
+      z-index: 10;
+    }
+    & > div:nth-child(1) {
+      left: 10vw;
+      border-top: 0;
+      border-right: 0;
+    }
+    & > div:nth-child(2) {
+      right: 10vw;
+      border-left: 0;
+      border-bottom: 0;
+    }
+    & > div:nth-child(1):hover {
+      border: 1px solid #2F4858;
+      border-top: 0;
+      border-right: 0;
+    }
+    & > div:nth-child(2):hover {
+      border: 1px solid #2F4858;
+      border-left: 0;
+      border-bottom: 0;
+    }
+  }
+  
+  #contents {
+    width: 65vw;
+    overflow: hidden;
+
+    ul.transition {
+      transition: .5s;
+    }
+    ul{
+      @include flex-set(center, center, row);
+      
+      li {
+        width: 65vw;
+        
+        a {
+          @include flex-set(center, center, row);
+
+          .contents-text {
+            width: 40%;
+            @include font-set(1.05em, nowrap, center, $color1);
+            word-break: keep-all;
+            
+            & > h2 {
+              font-size: 1.25em;
+              font-weight: 500;
+              margin-bottom: 5VH;
+              position: relative;
+            }
+            & > h2::after {
+              content: '';
+              @include size-set-color(10vw, 1px, #000);
+              @include absolute-top-left(160%, 50%, translateX(-50%));
+            }
+    
+            p {
+              margin-bottom: 1vh;
+              & > span {
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Design style set **********************
+#Design {
+  @include size-set-color(100vw, 100%, $color2);
+  @include flex-set(center, center, row);
+  padding: 16vh 0;
+  border-bottom: 1px solid #2F48584D;
+  flex-wrap: wrap;
+  position: relative;
+
+  #content {
+    @include flex-set(center, center, row);
+    flex-wrap: wrap;
+    width: 75%;
+
+    li {
+      width: 23%;
+      overflow: hidden;
+      margin: 10px 10px;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        transition: .3s;
+      }
+    }
+    li:hover > img {
+      transform: scale(1.1);
+    }
+  }
+
+  .click_img {
+    @include absolute-top-left(0,0,0);
+    @include size-set-color(100vw, 100%, rgba(0,0,0,.7));
+    display: none;
+
+    img {
+      @include absolute-top-left(50%, 50%, translate(-50%,-50%));
+      animation: opacity 1s;
+    }
+  }
+}
+@keyframes opacity {
+  from {
+    top: 60%;
+    opacity: 0;
+  }
+
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+
+// Contact style set **********************
+#Contact {
+  @include size-set-color(100vw, 70vh, $color2);
+  @include flex-set(center, center, row);
+  position: relative;
+  
+  #bg {
+    @include size-set(100vw, 480px);
+    background: url(../images/bg-icon.png) no-repeat 100% 100% / cover;
+    @include absolute-bottom-left(0, 0, translateY(0));
+    opacity: 0;
+  }
+
+  & > div:nth-child(2) {
+    @include font-set(1.1em, 500, center, $color1);
+    @include flex-set(center, center, column);
+    text-align: center;
+    position: relative;
+
+    #title {
+      margin-bottom: 8vh;
+      strong {
+        font-size: 1.25em;
+        font-weight: 500;
+
+        i {
+          display: block;
+        }
+        span {
+          position: relative;
+        }
+        span::before,
+        span::after {
+          content: '';
+          @include size-set-color(5px, 5px, #B1D2B8);
+          @include absolute-top-left(-5px, 6px, translateX(0));
+          border-radius: 50%;
+        }
+        span::after {
+          left: 26px;
+        }
+        span:nth-of-type(2)::before,
+        span:nth-of-type(2)::after {
+          background: #E5C1C5;
+        } 
+      }
+    }
+
+    & > img {
+      margin: 5vh 0 4vh;
+    }
+
+    #email {
+      font-weight: 400;
+      width: 275px;
+      
+      a{
+        color: $color1;
+      }
+      p {
+        text-align: left;
+        & > span {
+          @include size-set(30px, 30px);
+          display: inline-block;
+          text-indent: -9999em;
+          margin-right: 2.2vw;
+        }
+      }
+      #kakaotalk span {
+        background: url(../images/OpenKakaotalk.png) no-repeat;
+        margin-bottom: 3vh;
+      }
+      #gmail span {
+        background: url(../images/email.png) no-repeat;
+      }
+    }
+  }
+}
+
+@import "media.scss";

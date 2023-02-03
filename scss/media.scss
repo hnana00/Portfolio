@@ -1,0 +1,462 @@
+// media set ************************
+// tablet
+@media all and (max-width:1550px) {
+  // About-me
+  #About-me {
+    padding: 18vh 0;
+
+    & > div {
+      height: 66vh;
+      min-height: 580px;
+      max-height: 630px;
+    }
+
+    #box1 {
+      height: 66vh;
+      min-height: 570px;
+      max-height: 580px;
+
+      #img {
+        @include size-set(250px, 300px);
+        background: url(../images/img.png) no-repeat 0 0 / cover;
+      }
+      #img::before,
+      #img::after {
+      @include size-set(248px, 312px);
+      top: -6px;
+      left: 0;
+    }
+
+    #aboutme {
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+  }
+
+    hr {
+      display: none;
+    }
+
+    #box2 {
+      margin: 0 12vw;
+    }
+  }
+
+  // Portfolio
+  #Portfolio {
+    padding: 6vh 0 9vh 0;
+    #contents {
+      ul li {
+        a {
+          flex-direction: column;
+          
+          .contents-text {
+            width: 60%;
+            margin-top: 3vh;
+            font-size: 1.1em;
+          }
+        }        
+      }
+    }
+  }
+
+  //Design
+  #Design {
+    #content {
+      width: 85%;
+
+      li {
+        width: 22%;
+      }
+    }
+
+    .click_img {
+      img {
+        width: 45%;
+      }
+    }
+  }
+
+  // Contact
+  #Contact {
+    & > div:nth-child(2) {
+      #title {
+        strong span::after {
+          left: 24px;
+        }
+      }
+      #email {
+        width: 254px;
+      }
+    }
+  }
+}
+
+@media all and (max-width:1024px) {
+  // home
+  #container #home > span:nth-of-type(1) {
+    width: 400px;
+    height: 400px;
+    background: url(../images/icon1.png) no-repeat 0 0 / cover;
+  }
+  #container #home > span:nth-of-type(2) {
+    width: 120px;
+    height: 120px;
+    background: url(../images/icon2.png) no-repeat 0 0 / cover;
+  }
+  #container #home #home-text {
+    font-size: 1.4em;
+  }
+
+  //About-me
+  #About-me {
+    flex-wrap: wrap;
+    font-size: 1.1em;
+    padding: 15vh 0;
+
+    & > div {
+      @include size-set(30%, 65vh);
+      min-height: 570px;
+
+
+      strong::before {
+        width: 31vw;
+      }
+    }
+
+    #box1 {
+      @include size-set(100%, 45vh);
+      min-height: 440px;
+
+
+      #aboutme {
+        @include flex-set(center, center, row);
+        flex-wrap: wrap;
+        width: 100vw;
+        
+        
+        & > h2 {
+          width: 100%;
+        }
+        & > p {
+          width: 27%;
+          margin-top: 1vh;
+        }
+      }
+    }
+
+    hr {
+      @include size-set(100%, 1px);
+      display: block;
+      margin: 10vh 40vw;
+    }
+
+    #box2 {
+      margin: 0;
+      margin-right: 14vw;
+    }
+  }
+  // Portfolio
+  #Portfolio {
+    #contents {
+      ul li {
+        a {
+          .contents-text {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+  
+  //Design
+  #Design {
+    .click_img {
+      img {
+        width: 55%;
+      }
+    }
+  }
+
+  // Contact
+  #Contact {
+    & > div:nth-child(2) {
+      img {
+        margin-top: 3vh;
+      }
+      #email {
+        width: 230px;
+        margin-left: 2vw;
+      }
+    }
+  }
+}
+
+@media all and (max-width:930px) {
+    // Portfolio
+    #Portfolio {
+      #btn {
+        display: none;
+      }
+
+      #contents ul {
+        flex-direction: column;
+
+        li {
+          a img {
+            width: 100%;
+          }
+        }
+        li ~ li {
+          margin-top: 8vh;
+        }
+      }
+    }
+
+  //Design
+  #Design {
+    #content {
+      width: 90%;
+
+      li {
+        width: 25%;
+      }
+    }
+
+    .click_img {
+      img {
+        width: 60%;
+      }
+    }
+  }
+
+  // Contact
+  #Contact {
+    & > div:nth-child(2) {
+      #title {
+        strong span::after {
+          left: 22px;
+        }
+      }
+      img {
+        margin-top: 2vh;
+      }
+      #email {
+        margin-left: 4vw;
+      }
+    }
+  }
+}
+
+// mobile
+@media all and (max-width:768px) {
+  // home
+  #container #home {
+    & > span:nth-of-type(1) {
+      width: 300px;
+      height: 300px;
+      background: url(../images/icon1.png) no-repeat 0 0 / cover;
+    }
+    & > span:nth-of-type(2) {
+      width: 100px;
+      height: 100px;
+      background: url(../images/icon2.png) no-repeat 0 0 / cover;
+    }
+
+    #home-text {
+      font-size: 1.3em;
+      padding: 60px 0 0 5vw;
+  
+      h2 {
+          @include flex-set(center, center, column);
+          letter-spacing: 0.16em;
+          line-height: 1;
+      }
+
+      p {
+          @include flex-set(center, center, column);
+      }
+    }
+  }
+
+  // About-me
+  #About-me {
+    flex-direction: column;
+    padding: 12vh 0;
+
+    & > div {
+      @include size-set(50%, 60vh);
+      min-height: 530px;
+      text-align: center;
+    }
+
+    div strong{
+      text-align: center;
+    }
+
+    div strong::before {
+      width: 100%;
+    }
+
+    #box1 {
+      width: 100%;
+      height: 58vh;
+      min-height: 505px;
+
+      #aboutme {
+        flex-direction: column;
+
+        & > p {
+          width: 100%;
+        }
+      }
+    }
+
+
+    hr {
+      @include size-set(149px, 1px);
+      margin: 6vh 0;
+    }
+
+    #box2 {
+      margin-right: 0;
+      margin-bottom: 2vh;
+    }
+  }
+
+  // Portfolio
+  #Portfolio {
+    #contents {
+      ul li {
+        a {
+          img {
+            @include size-set(100%, 100%);
+          }
+          .contents-text {
+            width: 90%;
+            margin-top: 2vh;
+          }
+        }
+      }
+    }
+  }
+
+  //Design
+  #Design {
+    #content {
+      width: 95%;
+
+      li {
+        width: 35%;
+      }
+    }
+
+    .click_img {
+      img {
+        width: 70%;
+      }
+    }
+  }
+
+  #Contact {
+    & > div:nth-child(2) #email {
+      width: 213px;
+    }
+  }
+} 
+
+@media all and (max-width:500px) {
+  // home 
+  #home {
+    #home-text h2 {
+      font-size: 3em;
+    }
+  }
+  // About-me
+  #About-me {
+    & > div {
+      width: 65%;
+      min-height: 510px;
+    }
+    #box1 {
+      height: 50vh;
+      min-height: 450px;
+      max-height: 470px;
+
+      #img {
+        @include size-set(190px, 240px);
+        background: url(../images/img.png) no-repeat 0 0 / cover;
+      }
+
+      #img::before,
+      #img::after {
+        @include size-set(197px, 248px);
+        top: -6px;
+        left: 0;
+      }
+    }
+  }
+
+  // Contact
+  #Contact {
+    & > div:nth-child(2) {
+      #title {
+        strong {
+          white-space: pre-line;
+          line-height: 2.2;
+
+          i {
+            display: inline;
+          }
+          span::after {
+            left: 20px;
+          }
+        }
+      }
+      img {
+        margin-top: 0;
+      }
+    }
+  }
+  // Portfolio
+  #Portfolio {
+    padding: 10vh 0;
+    
+    #contents {
+      ul li {
+        a {
+          .contents-text {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  //Design
+  #Design {
+    #content {
+      width: 95%;
+
+      li {
+        width: 40%;
+        margin: 5px 5px;
+      }
+    }
+
+    .click_img {
+      img {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media all and (max-width:390px) {
+  #About-me {
+    & > div {
+      width: 80%;
+    }
+  }
+}

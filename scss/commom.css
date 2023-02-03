@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=IBM+Plex+Sans+KR:wght@300;400;500&family=Pangolin&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  color: #2F4858;
+  font: 16px 'IBM Plex Sans KR', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #282828;
+  text-decoration: none;
+}
+
+i {
+  font-style: normal;
+}
+
+header {
+  width: 100vw;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 1.6em;
+  font-weight: 400;
+  text-align: center;
+  color: #2F4858;
+  position: fixed;
+  z-index: 3;
+  font-family: 'Gaegu', cursive;
+  padding: 0 150px 0 5vw;
+}
+
+header #logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-weight: 700;
+}
+
+header #logo > span {
+  position: relative;
+  -webkit-animation: logo .8s alternate infinite;
+          animation: logo .8s alternate infinite;
+}
+
+header ul {
+  width: 0;
+  overflow: hidden;
+  -webkit-transition: .7s;
+  transition: .7s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+header ul li {
+  margin: 0 1.5vw;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+header ul li:hover {
+  color: #E5C1C5;
+}
+
+header ul li.on {
+  font-weight: 700;
+}
+
+header #Hamburger {
+  width: 30px;
+  height: 21px;
+  position: absolute;
+  top: 3.8vh;
+  right: 3vw;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  cursor: pointer;
+  z-index: 10;
+}
+
+header #Hamburger > div {
+  width: 30px;
+  height: 3px;
+  background: #2F4858;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+header #Hamburger > div:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+header #Hamburger > div:nth-child(3) {
+  position: absolute;
+  top: calc(100% - 3px);
+  left: 0;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+header #Hamburger:hover > div {
+  background: #F5F0ED;
+}
+
+@media all and (min-width: 1024px) and (max-width: 1550px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+  body header {
+    height: 12vh;
+  }
+  body header #Hamburger {
+    right: 5vw;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 768px) {
+  body {
+    font-size: 13px;
+  }
+  body header {
+    height: 10vh;
+  }
+  body header ul {
+    position: absolute;
+    top: 0;
+    right: -45vw;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    width: 100vw;
+    height: 100vh;
+    background: #E5C1C5;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 60vh;
+    padding-right: 42vw;
+    font-size: 1.2em;
+  }
+  body header ul li {
+    margin-bottom: 3vh;
+  }
+  body header ul li:hover {
+    color: #F5F0ED;
+  }
+  body header #Hamburger {
+    right: 6.5vw;
+  }
+  body header #Hamburger > div {
+    width: 27px;
+  }
+}
+/*# sourceMappingURL=commom.css.map */
