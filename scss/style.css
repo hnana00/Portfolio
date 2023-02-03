@@ -822,7 +822,6 @@ header #Hamburger:hover > div {
     padding: 18vh 0;
   }
   #About-me > div {
-    height: 66vh;
     min-height: 580px;
     max-height: 630px;
   }
@@ -905,7 +904,6 @@ header #Hamburger:hover > div {
   }
   #About-me > div {
     width: 30%;
-    height: 65vh;
     min-height: 570px;
   }
   #About-me > div strong::before {
@@ -1061,9 +1059,10 @@ header #Hamburger:hover > div {
   }
   #About-me > div {
     width: 50%;
-    height: 60vh;
-    min-height: 530px;
     text-align: center;
+  }
+  #About-me > div .maring {
+    margin: 5% 0;
   }
   #About-me div strong {
     text-align: center;
@@ -1122,7 +1121,6 @@ header #Hamburger:hover > div {
   }
   #About-me > div {
     width: 65%;
-    min-height: 510px;
   }
   #About-me #box1 {
     height: 50vh;

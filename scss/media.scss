@@ -6,7 +6,6 @@
     padding: 18vh 0;
 
     & > div {
-      height: 66vh;
       min-height: 580px;
       max-height: 630px;
     }
@@ -116,7 +115,7 @@
     padding: 15vh 0;
 
     & > div {
-      @include size-set(30%, 65vh);
+      width: 30%;
       min-height: 570px;
 
 
@@ -288,9 +287,12 @@
     padding: 12vh 0;
 
     & > div {
-      @include size-set(50%, 60vh);
-      min-height: 530px;
+      width: 50%;
       text-align: center;
+
+      .maring {
+        margin: 5% 0;
+      }
     }
 
     div strong{
@@ -379,7 +381,6 @@
   #About-me {
     & > div {
       width: 65%;
-      min-height: 510px;
     }
     #box1 {
       height: 50vh;
